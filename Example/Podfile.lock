@@ -6,7 +6,9 @@ PODS:
   - SHSafeProtectKit/Core (0.0.1)
   - SHSafeProtectKit/Foundation (0.0.1):
     - SHSafeProtectKit/Core
-  - SHSafeProtectKit/MRC (0.0.1)
+  - SHSafeProtectKit/MRC (0.0.1):
+    - SHSafeProtectKit/Core
+    - SHSafeProtectKit/Foundation
 
 DEPENDENCIES:
   - SHSafeProtectKit (from `../`)
@@ -16,7 +18,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SHSafeProtectKit: 5fd2126fe469b8a3321e94f47072930ab06bd818
+  SHSafeProtectKit: 2b51d7cf8e9561dabd887e10f294d7186ddf8bd8
 
 PODFILE CHECKSUM: 0c3d13d51676474176521f1c20c3d12857bb9ac8
 

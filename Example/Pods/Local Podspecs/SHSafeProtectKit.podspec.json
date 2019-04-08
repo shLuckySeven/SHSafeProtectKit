@@ -2,7 +2,6 @@
   "name": "SHSafeProtectKit",
   "version": "0.0.1",
   "summary": "SHSafeProtectKit",
-  "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/shLuckySeven/SHSafeProtectKit",
   "license": {
     "type": "MIT",
@@ -39,7 +38,15 @@
     {
       "name": "MRC",
       "requires_arc": false,
-      "source_files": "SHSafeProtectKit/MRC/*"
+      "source_files": "SHSafeProtectKit/MRC/*",
+      "dependencies": {
+        "SHSafeProtectKit/Foundation": [
+
+        ],
+        "SHSafeProtectKit/Core": [
+
+        ]
+      }
     }
   ]
 }
