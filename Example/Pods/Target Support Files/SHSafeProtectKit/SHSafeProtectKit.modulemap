@@ -1,0 +1,6 @@
+framework module SHSafeProtectKit {
+  umbrella header "SHSafeProtectKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

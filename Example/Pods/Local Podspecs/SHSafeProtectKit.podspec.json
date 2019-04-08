@@ -1,0 +1,45 @@
+{
+  "name": "SHSafeProtectKit",
+  "version": "0.0.1",
+  "summary": "SHSafeProtectKit",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shLuckySeven/SHSafeProtectKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shLuckySeven": "shuhuan329@163.com"
+  },
+  "source": {
+    "git": "https://github.com/shLuckySeven/SHSafeProtectKit.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": null
+  },
+  "frameworks": "Foundation",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "Core",
+      "requires_arc": true,
+      "source_files": "SHSafeProtectKit/Core/*"
+    },
+    {
+      "name": "Foundation",
+      "requires_arc": true,
+      "source_files": "SHSafeProtectKit/Foundation/*",
+      "dependencies": {
+        "SHSafeProtectKit/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "MRC",
+      "requires_arc": false,
+      "source_files": "SHSafeProtectKit/MRC/*"
+    }
+  ]
+}

@@ -7,12 +7,14 @@
 //
 
 #import "SHAppDelegate.h"
+#import <Bugly/Bugly.h>
+#import <SHSafeProtectKit/SHSafeProtector.h>
 
 @implementation SHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Bugly startWithAppId:@"your Bugly App ID"];
     return YES;
 }
 

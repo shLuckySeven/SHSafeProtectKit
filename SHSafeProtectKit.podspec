@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SHSafeProtectKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SHSafeProtectKit.'
+  s.version          = '0.0.1'
+  s.summary          = 'SHSafeProtectKit'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,14 +29,25 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.frameworks   = 'Foundation'
+  s.platform     = :ios
+  s.requires_arc = true
 
-  s.source_files = 'SHSafeProtectKit/Classes/**/*'
+  s.subspec 'Core' do |ss|
+      ss.requires_arc = true
+      ss.source_files = 'SHSafeProtectKit/Core/*'
+  end
   
-  # s.resource_bundles = {
-  #   'SHSafeProtectKit' => ['SHSafeProtectKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'Foundation' do |ss|
+      ss.requires_arc = true
+      ss.source_files = 'SHSafeProtectKit/Foundation/*'
+      ss.dependency 'SHSafeProtectKit/Core'
+  end
+  
+  s.subspec 'MRC' do |ss|
+      ss.requires_arc = false
+      ss.source_files = 'SHSafeProtectKit/MRC/*'
+#      ss.dependency 'SHSafeProtectKit/Foundation'
+#      ss.dependency 'SHSafeProtectKit/Core'
+  end
 end
